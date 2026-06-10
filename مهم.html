@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مستشار اختيار شريك الحياة الكامل</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #16a085;
+            --bg-color: #f5f7fa;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 { margin: 0; font-size: 24px; }
+        p.subtitle { margin: 10px 0 0 0; font-size: 14px; opacity: 0.9; }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+            margin-top: 35px;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-right: 5px solid var(--accent-color);
+            padding: 18px 22px;
+            margin-bottom: 15px;
+            border-radius: 4px 12px 12px 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: #fcfcfc;
+        }
+
+        .card::after {
+            content: "🔊 اضغط للاستماع";
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 11px;
+            color: #999;
+        }
+
+        .danger-card { border-right-color: #e74c3c; }
+        .warning-card { border-right-color: #f39c12; }
+        .success-card { border-right-color: #2ecc71; }
+        .info-card { border-right-color: #3498db; }
+
+        .audio-controls {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 30px;
+            font-size: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        button.stop-btn {
+            background: #e74c3c;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            cursor: pointer;
+            margin-right: 5px;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+
+<div class="audio-controls">
+    <button class="stop-btn" onclick="stopAudio()">⏹️ إيقاف الصوت</button>
+    <span>اضغط على أي بطاقة لسماعها</span>
+</div>
+
+<div class="container">
+    <header>
+        <h1>المستشار الشامل لاختيار شريك الحياة</h1>
+        <p class="subtitle">تم تجميع كافة المحادثات والنصائح والمقارنات هنا. اضغط على أي فقرة للاستماع إليها.</p>
+    </header>
+
+    <div class="section-title">المقدمة وتوصيف المشكلة</div>
+    <div class="card info-card" onclick="speakText(this)">
+        يا رب يوفق بنتك لكل خير ويختار لها الزوج الصالح. طبعاً، الحيرة دي طبيعية جداً في موقف مصيري زي ده. المعادلة هنا صعبة، بين الاستقرار المادي وضمان المستقبل مع شخص قد لا تشعر معه بعاطفة قوية، وبين الحب والمشاعر الصادقة لكن مع ظروف غير واضحة ومخاطرة أكبر. من المفيد إنك تتكلمي مع بنتك بصراحة عن توقعاتها وايه اللي بتعتبره أهم في شريك حياتها، وهل هي مستعدة تتحمل الصعوبات اللي ممكن تواجهها في الحالتين.
+    </div>
+
+    <div class="section-title">أولاً: أسئلة استكشاف العريس الأول (صاحب الظروف المستقرة)</div>
+    
+    <div class="card" onclick="speakText(this)">
+        <strong>هل في قبول مبدئي؟</strong> هل الشخص ده مريح في التعامل؟ هل في صفة معينة قلقاكي منه، ولا المشكلة بس إنك مش حاسة بمشاعر تجاهه؟ الهدف هنا معرفة هل الرفض سببه عدم تقبل تام ولا مجرد غياب الحب في البداية.
+    </div>
+
+    <div class="card" onclick="speakText(this)">
+        <strong>فرصة التعارف:</strong> هل تفتكري لو قعدتي معاه وتكلمتوا أكتر، ممكن يحصل إعجاب وتفاهم؟ لأن الحب الحقيقي ساعات بييجي بالعشرة والمواقف.
+    </div>
+
+    <div class="card" onclick="speakText(this)">
+        <strong>الأمان والاستقرار:</strong> شايفة إزاي حياتك مع شخص يقدر يوفر لك حياة مستقرة من أول يوم؟ هل ده هيديكي إحساس بالأمان؟
+    </div>
+
+    <div class="section-title">ثانياً: أسئلة العريس الثاني (الطالب اللي بتحبه)</div>
+
+    <div class="card warning-card" onclick="speakText(this)">
+        <strong>واقعية الخطوة:</strong> هو لسه طالب، يعني قدامه جيش، وتدوير على شغل، وتجهيز شقة. هل عندك الصبر والقدرة تستني كل السنين دي؟ الهدف هنا تنزيل المشاعر لأرض الواقع واختبار مدى قدرتها على تحمل الصعاب.
+    </div>
+
+    <div class="card warning-card" onclick="speakText(this)">
+        <strong>مواجهة التحديات:</strong> لو الظروف المادية بعد الجواز كانت صعبة في البهاية، هل حبك ليه هيكون كافي ومستعدة تستحملي وتتنازلي عن حاجات معينة، ولا ده ممكن يقلب بخلافات؟
+    </div>
+
+    <div class="card warning-card" onclick="speakText(this)">
+        <strong>تأثير انفصال الأهل:</strong> انفصال أهله مش عيب فيه، بس هل هو شخص ناضج ومستقل؟ وهل المشاكل الأسرية دي مأثرة على نفسيته أو على نظرته للجواز؟
+    </div>
+
+    <div class="section-title">ثالثاً: أسئلة عامة للمقارنة وتحديد الأولويات</div>
+
+    <div class="card success-card" onclick="speakText(this)">
+        <strong>ترتيب الأولويات:</strong> لو هترتبي أولوياتك في الجواز، إيه الأهم بالنسبة لك بالترتيب: الحب والمشاعر، الأمان والاستقرار المادي، الصبر وبناء المستقبل سوا؟
+    </div>
+
+    <div class="card success-card" onclick="speakText(this)">
+        <strong>تخيل المستقبل:</strong> غمضي عينك وفكري في حياتك بعد 5 سنين.. شايفة نفسك أسعد ومستقرة أكتر في أنهي بيت ومع أنهي شخص؟
+    </div>
+
+    <div class="section-title">رابعاً: المقارنة التفصيلية الشاملة بين الطرفين</div>
+
+    <div class="card info-card" onclick="speakText(this)">
+        <strong>الوضع المادي والمهني:</strong> العريس الأول مستقر وجاهز، خطوة الجواز والاستقرار سريعة ومستواها المعيشي مضمون من البداية. أما العريس الثاني فوصفه غير واضح، لسه في مرحلة الدراسة، وقدامه جيش، ورحلة بحث عن عمل وتأسيس للمستقبل والموضوع محتاج وقت وصبر طويل.
+    </div>
+
+    <div class="card info-card" onclick="speakText(this)">
+        <strong>الجانب العاطفي:</strong> العريس الأول الجانب العاطفي غائب حالياً، بنتك ما بتحبوش وده ممكن يخليها تحس بفتور أو تتردد في الخطوة. أما العريس الثاني فالجانب العاطفي قوي جداً، وفي مشاعر حب متبادلة، وده بيديها طاقة إيجابية ورغبة في الارتباط بيه.
+    </div>
+
+    <div class="card info-card" onclick="speakText(this)">
+        <strong>العلاقات الأسرية والميزة الأساسية:</strong> العريس الأول عائلته غالباً مستقرة ومفيش إشارة لمشاكل عائلية مسبقة، وميزته الأساسية الأمان والراحة وتوفير حياة مستقرة مادياً واجتماعياً والحب ممكن ييجي بالعشرة والمعاملة الطيبة. أما العريس الثاني فأهله منفصلين، والانفصال مش عيب في الشاب، لكنه بيتطلب التأكد من مدى نضجه النفسي، وميزته الأساسية التفاهم والقبول والجواز قايم على رغبة ومشاعر حقيقية من ناحيتها.
+    </div>
+
+    <div class="card danger-card" onclick="speakText(this)">
+        <strong>المخاطرة الأكبر في الحالتين:</strong> المخاطرة مع العريس الأول إنها تعيش معاه بجفاء عاطفي لو القبول والود ما ظهرش مع الوقت والعشرة. أما المخاطرة الأكبر مع العريس الثاني هي إن المشاعر تتهز وتتحول لخلافات لو طالت فترة الانتظار، أو لو اصطدم الحب بالواقع المادي الصعب بعد الجواز.
+    </div>
+
+    <div class="card success-card" onclick="speakText(this)">
+        <strong>خلاصة المقارنة ونصيحة التوجيه:</strong> مع العريس الأول الرهان هنا على العقل والعشرة. هل بنتك حاسة برفض تام ونفور ولا مجرد عدم حب؟ لو في قبول مبدئي واحترام، فالحب والمودة غالباً بييجوا مع الوقت والمواقف النبيلة والاستقرار. أما مع العريس الثاني فالرهان هنا على التحمل والوقت. الحب لوحده مش بيبني بيت؛ لازم تسألوه عن خطته الواقعية للمستقبل وهل عنده رؤية واضحة؟ وهل بنتك عندها نضج كافي يستحمل ضغوط الحياة المادية في أولها؟ القرار في النهاية محتاج توازن؛ العاطفة مهمة جداً عشان البيت يستمر، والأمان المادي والاجتماعي ركيزة أساسية عشان الحب ما يهربش من الباب عند أول أزمة.
+    </div>
+
+    <div class="section-title">خامساً: حسم تشتت البنت وخوفها من ظلم العريس الثاني</div>
+
+    <div class="card danger-card" onclick="speakText(this)">
+        <strong>تفكيك الشعور بالذنب:</strong> وجود القبول المبدئي للعريس الأول ده مؤشر مهم جداً وإيجابي، ومعناه إن الباب مش مقفول. أما بخصوص شعورها بالخوف من إنها تظلم العريس التاني، فده دليل على نقاء قلبها وأصلها الطيب، لكنه شعور محتاج وقفة عقلانية وتفكيك، لأنها في الحقيقة مش بتظلمه.
+    </div>
+
+    <div class="card danger-card" onclick="speakText(this)">
+        <strong>الجواز مش جمعية خيرية:</strong> قولي لها يا بنتي إنتي مش مسؤولة عن إسعاد العريس التاني على حساب مستقبلك وحياتك. الارتباط مش تعاطف؛ الارتباط مسؤولية وبناء بيت. لو وافقت عليه لمجرد إنها خايفة على مشاعره، هتظلم نفسها وتظلمه هو كمان لما تكتشف إن الواقع أصعب من طاقتها.
+    </div>
+
+    <div class="card danger-card" onclick="speakText(this)">
+        <strong>الظروف أقوى من الحب:</strong> العريس التاني لسه طالب، يعني لسه ما بدأش مشواره من الأساس. دراسة، وجيش، وتدوير على شغل، وتكوين نفسه. خطوة الجواز بالنسبة له لسه بعيدة جداً وممكن تاخد سنين. فلو هي مشيت في طريقها، ده نصيب وظروف واقعية مش ظلم منها.
+    </div>
+
+    <div class="card success-card" onclick="speakText(this)">
+        <strong>إعطاء فرصة للعريس الأول والحب الحقيقي:</strong> طالما في قبول مبدئي، فده أرضية ممتازة. القبول مع الوقت، والاحترام، والمواقف، والاهتمام، بيتحول لمشاعر حب حقيقية ومستقرة، حب مبني على العشرة والأمان وده غالباً بيكون أقوى وأبقى من حب البدايات. الحب لوحده مبيفتحش بيت؛ الحب مشاعر جميلة، بس لما بيصطدم بطلبات الحياة، ومصاريف المعيشة، والانتظار الطويل، والضغط المادي، ممكن يتحول لخلافات ومشاكل تمحي الحب ده.
+    </div>
+
+    <div class="card success-card" style="background-color: #e8f8f5; border-right-color: #16a085;" onclick="speakText(this)">
+        <strong>نصيحة الأم العملية والنهائية لبنتها:</strong> يا بنتي، الاستخارة والواقع بيقولوا إنك تشتري اللي جاهز ومناسب وفيه قبول. سيبك من فكرة الظلم، كل واحد بياخد نصيبه في الدنيا، والشاب ده لما يخلص ويبدأ حياته ربنا هيرزقه باللي تناسب ظروفه وتستناه. فكري في مستقبلك وفي البيت اللي هيتبني على أساس قوي ومستقر من أول يوم. صلي استخارة بنية العريس الأول، وادعي ربنا يشيل التشتت والتعاطف ده من قلبك عشان تشوفي مصلحتك بوضوح.
+    </div>
+</div>
+
+<script>
+    // التأكد من تحميل محرك الصوت
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.getVoices();
+    }
+
+    function speakText(element) {
+        stopAudio();
+
+        // تنظيف النص المقروء من رمز المساعدة
+        let text = element.innerText || element.textContent;
+        text = text.replace("🔊 اضغط للاستماع", "");
+
+        let utterance = new SpeechSynthesisUtterance(text);
+        
+        // البحث التلقائي والديناميكي عن أفضل محرك صوت للغة العربية في جهازك
+        let voices = window.speechSynthesis.getVoices();
+        let arabicVoice = voices.find(voice => voice.lang.startsWith('ar'));
+        
+        if (arabicVoice) {
+            utterance.voice = arabicVoice;
+        }
+        
+        // كود احتياطي عام في حال لم يتعرف المتصفح على الصوت المحدد
+        utterance.lang = 'ar'; 
+        
+        // ضبط السرعة لتكون هادئة وواضحة جداً
+        utterance.rate = 0.85; 
+        utterance.pitch = 1.0;
+
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function stopAudio() {
+        if (window.speechSynthesis) {
+            window.speechSynthesis.cancel();
+        }
+    }
+</script>
+
+</body>
+</html>
